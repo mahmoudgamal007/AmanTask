@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Addresses</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p *ngFor="let address of empAddresses">
+      {{ address.country }}, {{ address.governorate }} , {{ address.city }},
+      {{ address.street }}
+    </p>
+  </mat-card-content>
+</mat-card>

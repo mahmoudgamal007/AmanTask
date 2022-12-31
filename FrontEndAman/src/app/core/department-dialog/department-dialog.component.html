@@ -1,0 +1,35 @@
+<h1 mat-dialog-title>{{ actionTitle }}</h1>
+<div mat-dialog-content>
+  <form [formGroup]="departmentForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input
+        formControlName="departmentName"
+        matInput
+        placeholder="Enter name"
+      />
+      <mat-icon matSuffix>business_center</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Specialization</mat-label>
+      <input
+        formControlName="departmentSpecialization"
+        matInput
+        placeholder="Enter Specialization"
+      />
+      <mat-icon matSuffix>bubble_chart</mat-icon>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close="">Cancel</button>
+  <button
+    (click)="addDepartment()"
+    style="margin-left: 5px"
+    mat-raised-button
+    color="primary"
+  >
+    {{ actionBtn }}
+  </button>
+</div>
